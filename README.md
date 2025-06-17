@@ -22,3 +22,12 @@
 #### 标签管理
 1. 标签增删改查
 2. 与商户进行标签绑定
+
+
+### 使用
+```
+git clone
+cd bill
+python manage.py migrate
+python manage.py runserver
+```

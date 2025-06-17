@@ -275,3 +275,7 @@ bill/media/
 .env
 .envs/*
 !.envs/.local/
+
+
+### sqlite
+*.sqlite3
