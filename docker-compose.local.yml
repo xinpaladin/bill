@@ -1,0 +1,23 @@
+volumes:
+  bill_local_postgres_data: {}
+  bill_local_postgres_data_backups: {}
+  
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: bill_local_django
+    container_name: bill_local_django
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app:z
+    env_file:
+      - ./.envs/.local/.django
+    ports:
+      - '8000:8000'
+    command: /start
+
+
